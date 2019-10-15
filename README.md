@@ -1,12 +1,12 @@
 # Wishlist_Application
 
 Libraries required:
--Python
-Flask
-Flask-SQLAlchemy
-Basics of HTML & CSS
+--->Python, 
+Flask, 
+Flask-SQLAlchemy, 
+Basics of HTML & CSS.
 
-How to use
+How to use Wishlist
 
 Download the files and Run python code.py
 
