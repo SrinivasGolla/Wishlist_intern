@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Web Page Having A Form</title>
+    <link rel = "stylesheet" type="text/css" href="Form.css">
+</head>
+<style>
+      body {
+    background-color : white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: Arial;
+}
+h1 {
+    color : #000000;
+    text-align : center;
+    font-family: "SIMPSON";
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+.same{
+    width: 49%;
+    margin: 0px;
+    padding: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+    font-size: 3vh;
+    display: inline-block;
+}
+a{
+    color: white;
+    padding:  7px 10px;
+    background-color: red;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+}
+.btn{
+    color: white;
+    padding:  10px 10px;
+    background-color: blue;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.5);
+
+}
+ul{
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+li{
+    padding: 10px;
+    margin: 0px;
+    border-right: 2px solid blue;
+}
+input[type = text] {
+    padding: 5px;
+    font-size: 3vh;
+
+}
+input[type = date] {
+    padding: 5px;
+    font-size: 3vh;
+
+}
+form{
+    text-align: center;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 3px;
+}
+</style>
+<body>
+    <div class="same">
+        <h1>Wish-List</h1>
+        <form action="/wish" method="post">
+            <table>
+                <tr>
+                    <td>Wish :</td> 
+                    <td><input type="text" name="wish"></td>
+                    <br>
+                </tr>
+                <tr>
+                    <td>Date :</td> <td><input type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}"></td>
+                    <span class="validity"></span>
+                    <br>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Add Wish" class="btn"></td>
+                </tr>
+            </table>
+      </form>
+  </div>
+  <div class="same" style="border-left: 2px solid grey;">
+    <h1>Wishes</h1>
+    
+    {% for wish in wishs %}
+    <ul>
+        <li>{{wish.id}}</li>
+        <li>{{wish.wish}}</li>
+        <li>{{wish.date}}</li>
+        <li><a href="/delete/{{ wish.id }}">Delete</a></li>
+    </ul>
+    {% endfor %}
+    
+    </div>
+</body>
+</html>
