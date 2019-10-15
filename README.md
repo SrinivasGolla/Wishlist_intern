@@ -8,7 +8,7 @@ Basics of HTML & CSS.
 
 How to use Wishlist
 
-Download the files and Run python code.py
+Download the files and Run python wish.py
 
 Next, open localhost:5000 in your browser to see the results.
 
