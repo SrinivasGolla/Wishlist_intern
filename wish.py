@@ -17,12 +17,12 @@ class Wishlist(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	wish = db.Column(db.Text)
 	date = db.Column(db.Text)
-	done=db.Column(db.Boolean, default=False)
+
 
 	def __init__(self, wish,date):
 		self.wish = wish
 		self.date = date
-		self.done = False
+
 
 #To use database in URI
 db.create_all()
@@ -57,6 +57,6 @@ def delete_task(task_id):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0",port=5000,debug=True)
 
 

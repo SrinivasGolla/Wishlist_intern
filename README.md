@@ -10,5 +10,5 @@ How to use Wishlist
 
 Download the files and Run python code.py
 
-Next, open 127.0.0.1:5000 in your browser to see the results.
+Next, open localhost:5000 in your browser to see the results.
 
